@@ -1,26 +1,424 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DSCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4A-Ln-SIK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                <color key="backgroundColor" red="0.50583195686340332" green="0.50591880083084106" blue="0.50581353902816772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="38" id="j6M-xu-0gh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cN-Pn-KT0">
+                                <rect key="frame" x="0.0" y="38" width="320" height="109"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="seG-eR-bMb">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="109"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="0">
+                                                <attributes>
+                                                    <font key="NSFont" size="77" name=".SFNSDisplay"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.50583195686340332" green="0.50591880083084106" blue="0.50581353902816772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="seG-eR-bMb" firstAttribute="top" secondItem="0cN-Pn-KT0" secondAttribute="top" id="1sw-GF-28d"/>
+                                    <constraint firstAttribute="trailing" secondItem="seG-eR-bMb" secondAttribute="trailing" constant="8" id="2Ua-L1-OQu"/>
+                                    <constraint firstAttribute="width" priority="750" constant="320" id="6PJ-WJ-gx5"/>
+                                    <constraint firstAttribute="height" priority="900" constant="109" id="TuC-8r-pJf"/>
+                                    <constraint firstItem="seG-eR-bMb" firstAttribute="leading" secondItem="0cN-Pn-KT0" secondAttribute="leading" constant="8" id="Vfu-C2-tNq"/>
+                                    <constraint firstAttribute="bottom" secondItem="seG-eR-bMb" secondAttribute="bottom" id="g1n-fz-mZX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grj-2b-7yB">
+                                <rect key="frame" x="0.0" y="147" width="320" height="421"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aR2-LS-EgU" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="19" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="70" id="2bx-vL-0LA"/>
+                                            <constraint firstAttribute="height" priority="750" constant="70" id="boL-kh-4Ep"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearResultButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m01-MK-gxg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ql-Rs-wfa" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="19" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="-/+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSignButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hy3-Vv-Lzu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMC-D1-Gbx" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="242" y="19" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="/">
+                                            <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GB-ur-ANz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QW-iw-8Z2" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="242" y="97" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ylO-Zw-zVD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4f-fc-PZc" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="242" y="175" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ly9-i0-SIJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wv-OD-ELP" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="253" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kjM-wU-M5Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-u0-tgI" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="242" y="253" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejb-jI-Fst"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pQ-9M-B3O" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="331" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title=",">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGz-Tf-vHY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zA-KD-ge5" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="242" y="331" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" red="0.99990516901016235" green="1" blue="0.99987047910690308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resultButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C2c-Js-94X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BV3-1K-skU" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="97" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hyi-eG-IS2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsO-xZ-eyg" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="175" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="avV-Z5-j4X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHy-yZ-cJu" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="86" y="175" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pON-u6-Xe6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWb-Dn-Kpy" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="86" y="253" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFh-CP-fxT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usv-MX-dK1" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="86" y="97" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6L-R5-BlC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9f-jx-ddH" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="175" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zim-an-vc8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI0-JW-E6J" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="253" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zci-zu-yIl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogy-Pw-kgO" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="97" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZcE-oX-jEC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHM-kv-PI4" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="331" width="148" height="70"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="CRN-UT-OdP"/>
+                                            <constraint firstAttribute="width" priority="750" constant="148" id="lmA-iV-cHD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ovQ-AL-iCN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQv-HO-4QX" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="86" y="19" width="70" height="70"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.77494333550000005" green="0.78310063370000005" blue="0.78310063370000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="percentsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7C1-EX-hKI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77494333546434968" green="0.78310063373239547" blue="0.78310063373239547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="q4f-fc-PZc" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="0SJ-J1-OAb"/>
+                                    <constraint firstItem="3zA-KD-ge5" firstAttribute="trailing" secondItem="QMC-D1-Gbx" secondAttribute="trailing" id="1O3-YV-JBy"/>
+                                    <constraint firstItem="ogy-Pw-kgO" firstAttribute="top" secondItem="aR2-LS-EgU" secondAttribute="bottom" constant="8" symbolic="YES" id="2Zg-a3-JDG"/>
+                                    <constraint firstItem="6QW-iw-8Z2" firstAttribute="trailing" secondItem="QMC-D1-Gbx" secondAttribute="trailing" id="2c2-FY-mab"/>
+                                    <constraint firstItem="aR2-LS-EgU" firstAttribute="leading" secondItem="grj-2b-7yB" secondAttribute="leading" constant="8" id="2zZ-nU-SVr"/>
+                                    <constraint firstItem="QMC-D1-Gbx" firstAttribute="leading" secondItem="9Ql-Rs-wfa" secondAttribute="trailing" constant="8" id="3D4-QJ-Sx8"/>
+                                    <constraint firstItem="ogy-Pw-kgO" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="3gJ-UQ-lnM"/>
+                                    <constraint firstItem="QMC-D1-Gbx" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="4bQ-g7-o30"/>
+                                    <constraint firstItem="ogy-Pw-kgO" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="4eQ-P1-FhT"/>
+                                    <constraint firstItem="BV3-1K-skU" firstAttribute="top" secondItem="ogy-Pw-kgO" secondAttribute="top" id="5sW-Jo-m7h"/>
+                                    <constraint firstItem="uQv-HO-4QX" firstAttribute="top" secondItem="grj-2b-7yB" secondAttribute="top" constant="19" id="60Z-92-F3K"/>
+                                    <constraint firstItem="QMC-D1-Gbx" firstAttribute="top" secondItem="grj-2b-7yB" secondAttribute="top" constant="19" id="7K3-Sw-ca5"/>
+                                    <constraint firstItem="QMC-D1-Gbx" firstAttribute="top" secondItem="aR2-LS-EgU" secondAttribute="top" id="7T0-SE-Ix4"/>
+                                    <constraint firstItem="BV3-1K-skU" firstAttribute="trailing" secondItem="9Ql-Rs-wfa" secondAttribute="trailing" id="84f-Mr-x2D"/>
+                                    <constraint firstItem="1pQ-9M-B3O" firstAttribute="trailing" secondItem="9Ql-Rs-wfa" secondAttribute="trailing" id="AiQ-RX-sNx"/>
+                                    <constraint firstItem="1pQ-9M-B3O" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="BQ8-V8-btu"/>
+                                    <constraint firstItem="2wv-OD-ELP" firstAttribute="trailing" secondItem="9Ql-Rs-wfa" secondAttribute="trailing" id="Bk9-HO-SAC"/>
+                                    <constraint firstItem="bHy-yZ-cJu" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="CvG-oC-fr2"/>
+                                    <constraint firstItem="3zA-KD-ge5" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="DKq-oT-paZ"/>
+                                    <constraint firstItem="F9f-jx-ddH" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="E3H-f4-lAu"/>
+                                    <constraint firstItem="wsO-xZ-eyg" firstAttribute="trailing" secondItem="9Ql-Rs-wfa" secondAttribute="trailing" id="Fs5-6w-UKC"/>
+                                    <constraint firstItem="bHy-yZ-cJu" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="FzW-86-zy2"/>
+                                    <constraint firstItem="BV3-1K-skU" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="G0P-pW-tWc"/>
+                                    <constraint firstItem="ahh-u0-tgI" firstAttribute="trailing" secondItem="QMC-D1-Gbx" secondAttribute="trailing" id="Gpf-bP-Kzh"/>
+                                    <constraint firstItem="F9f-jx-ddH" firstAttribute="leading" secondItem="aR2-LS-EgU" secondAttribute="leading" id="HKm-Md-kl4"/>
+                                    <constraint firstItem="wsO-xZ-eyg" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="IPl-4F-wvT"/>
+                                    <constraint firstItem="aR2-LS-EgU" firstAttribute="top" secondItem="grj-2b-7yB" secondAttribute="top" constant="19" id="IVG-WW-3JM"/>
+                                    <constraint firstItem="vWb-Dn-Kpy" firstAttribute="top" secondItem="uI0-JW-E6J" secondAttribute="top" id="Icz-P0-sA5"/>
+                                    <constraint firstItem="ahh-u0-tgI" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="JPr-zk-Swp"/>
+                                    <constraint firstItem="usv-MX-dK1" firstAttribute="trailing" secondItem="uQv-HO-4QX" secondAttribute="trailing" id="JSJ-Ko-1Pc"/>
+                                    <constraint firstItem="ahh-u0-tgI" firstAttribute="top" secondItem="uI0-JW-E6J" secondAttribute="top" id="JW6-Fs-8vi"/>
+                                    <constraint firstItem="ogy-Pw-kgO" firstAttribute="leading" secondItem="aR2-LS-EgU" secondAttribute="leading" id="LPh-I3-jgI"/>
+                                    <constraint firstItem="usv-MX-dK1" firstAttribute="top" secondItem="ogy-Pw-kgO" secondAttribute="top" id="M3o-Be-Cyv"/>
+                                    <constraint firstItem="ahh-u0-tgI" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="MUC-68-JfO"/>
+                                    <constraint firstItem="uQv-HO-4QX" firstAttribute="leading" secondItem="aR2-LS-EgU" secondAttribute="trailing" constant="8" id="Mm7-u3-C2x"/>
+                                    <constraint firstItem="FHM-kv-PI4" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="N19-eM-eUe"/>
+                                    <constraint firstItem="2wv-OD-ELP" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="N7t-DC-fYc"/>
+                                    <constraint firstItem="uI0-JW-E6J" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="OSP-vb-dxx"/>
+                                    <constraint firstItem="FHM-kv-PI4" firstAttribute="leading" secondItem="aR2-LS-EgU" secondAttribute="leading" id="Qmh-dh-M4w"/>
+                                    <constraint firstItem="1pQ-9M-B3O" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="Qre-PW-Nof"/>
+                                    <constraint firstAttribute="trailing" secondItem="QMC-D1-Gbx" secondAttribute="trailing" constant="8" id="RKo-6r-bNQ"/>
+                                    <constraint firstItem="vWb-Dn-Kpy" firstAttribute="trailing" secondItem="uQv-HO-4QX" secondAttribute="trailing" id="RVo-v8-2D7"/>
+                                    <constraint firstItem="2wv-OD-ELP" firstAttribute="top" secondItem="uI0-JW-E6J" secondAttribute="top" id="Rbc-Fh-AXi"/>
+                                    <constraint firstItem="9Ql-Rs-wfa" firstAttribute="leading" secondItem="uQv-HO-4QX" secondAttribute="trailing" constant="8" id="TaE-xh-5MG"/>
+                                    <constraint firstItem="wsO-xZ-eyg" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="WKz-fp-eCP"/>
+                                    <constraint firstItem="9Ql-Rs-wfa" firstAttribute="top" secondItem="grj-2b-7yB" secondAttribute="top" constant="19" id="Y6K-Nj-VwI"/>
+                                    <constraint firstItem="uQv-HO-4QX" firstAttribute="top" secondItem="aR2-LS-EgU" secondAttribute="top" id="ZnE-5g-vy2"/>
+                                    <constraint firstItem="9Ql-Rs-wfa" firstAttribute="top" secondItem="aR2-LS-EgU" secondAttribute="top" id="ZxI-eR-mc3"/>
+                                    <constraint firstItem="BV3-1K-skU" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="aad-Ms-ceA"/>
+                                    <constraint firstItem="uI0-JW-E6J" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="dMA-J2-36o"/>
+                                    <constraint firstItem="6QW-iw-8Z2" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="dNu-Iw-pbm"/>
+                                    <constraint firstItem="usv-MX-dK1" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="dlg-Ez-aGD"/>
+                                    <constraint firstItem="wsO-xZ-eyg" firstAttribute="top" secondItem="F9f-jx-ddH" secondAttribute="top" id="e4h-Gu-jo9"/>
+                                    <constraint firstItem="uI0-JW-E6J" firstAttribute="top" secondItem="F9f-jx-ddH" secondAttribute="bottom" constant="8" id="eDb-1I-Hgm"/>
+                                    <constraint firstItem="6QW-iw-8Z2" firstAttribute="top" secondItem="ogy-Pw-kgO" secondAttribute="top" id="eDq-hB-TuA"/>
+                                    <constraint firstItem="uQv-HO-4QX" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="eTH-ch-SmS"/>
+                                    <constraint firstItem="vWb-Dn-Kpy" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="fsR-5e-DNh"/>
+                                    <constraint firstItem="bHy-yZ-cJu" firstAttribute="top" secondItem="F9f-jx-ddH" secondAttribute="top" id="gBJ-aP-AVA"/>
+                                    <constraint firstItem="FHM-kv-PI4" firstAttribute="top" secondItem="uI0-JW-E6J" secondAttribute="bottom" constant="8" symbolic="YES" id="gT7-d1-Jzm"/>
+                                    <constraint firstItem="usv-MX-dK1" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="hjB-JJ-GnN"/>
+                                    <constraint firstItem="QMC-D1-Gbx" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="jml-BB-mDf"/>
+                                    <constraint firstItem="1pQ-9M-B3O" firstAttribute="bottom" secondItem="FHM-kv-PI4" secondAttribute="bottom" id="k89-V6-CJV"/>
+                                    <constraint firstItem="6QW-iw-8Z2" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="ksv-ka-oga"/>
+                                    <constraint firstItem="3zA-KD-ge5" firstAttribute="bottom" secondItem="FHM-kv-PI4" secondAttribute="bottom" id="lyQ-ld-3wN"/>
+                                    <constraint firstItem="uQv-HO-4QX" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="mCU-eg-CmX"/>
+                                    <constraint firstItem="F9f-jx-ddH" firstAttribute="top" secondItem="ogy-Pw-kgO" secondAttribute="bottom" constant="8" symbolic="YES" id="oB0-la-vof"/>
+                                    <constraint firstItem="q4f-fc-PZc" firstAttribute="top" secondItem="F9f-jx-ddH" secondAttribute="top" id="oa7-q9-LRQ"/>
+                                    <constraint firstItem="q4f-fc-PZc" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="ofb-Zb-Qey"/>
+                                    <constraint firstItem="F9f-jx-ddH" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="saF-We-Bae"/>
+                                    <constraint firstItem="q4f-fc-PZc" firstAttribute="trailing" secondItem="QMC-D1-Gbx" secondAttribute="trailing" id="t4d-1g-OoN"/>
+                                    <constraint firstItem="1pQ-9M-B3O" firstAttribute="leading" secondItem="FHM-kv-PI4" secondAttribute="trailing" constant="8" id="u6N-Hc-Xqf"/>
+                                    <constraint firstItem="vWb-Dn-Kpy" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="vlQ-r9-P4M"/>
+                                    <constraint firstAttribute="bottom" secondItem="FHM-kv-PI4" secondAttribute="bottom" constant="20" id="voi-Ua-iua"/>
+                                    <constraint firstItem="9Ql-Rs-wfa" firstAttribute="width" secondItem="aR2-LS-EgU" secondAttribute="width" id="wgU-8W-l8P"/>
+                                    <constraint firstItem="2wv-OD-ELP" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="wiR-28-6S9"/>
+                                    <constraint firstItem="uI0-JW-E6J" firstAttribute="leading" secondItem="aR2-LS-EgU" secondAttribute="leading" id="wjw-0g-QSl"/>
+                                    <constraint firstItem="3zA-KD-ge5" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="wxb-Rn-8nP"/>
+                                    <constraint firstItem="bHy-yZ-cJu" firstAttribute="trailing" secondItem="uQv-HO-4QX" secondAttribute="trailing" id="zNl-MX-mw2"/>
+                                    <constraint firstItem="9Ql-Rs-wfa" firstAttribute="height" secondItem="aR2-LS-EgU" secondAttribute="height" id="zpg-7T-C1r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q4A-Ln-SIK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CPq-N3-qHr"/>
+                            <constraint firstItem="grj-2b-7yB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DUn-74-vhi"/>
+                            <constraint firstAttribute="trailing" secondItem="0cN-Pn-KT0" secondAttribute="trailing" id="Vkv-wU-NUt"/>
+                            <constraint firstItem="Q4A-Ln-SIK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y5X-Yq-ulT"/>
+                            <constraint firstItem="0cN-Pn-KT0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b42-FZ-tgm"/>
+                            <constraint firstAttribute="bottom" secondItem="grj-2b-7yB" secondAttribute="bottom" id="cXn-Wm-uX4"/>
+                            <constraint firstItem="grj-2b-7yB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjN-4A-nvd"/>
+                            <constraint firstItem="Q4A-Ln-SIK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hfP-Zl-u6w"/>
+                            <constraint firstItem="grj-2b-7yB" firstAttribute="top" secondItem="0cN-Pn-KT0" secondAttribute="bottom" id="hrn-SC-EUH"/>
+                            <constraint firstItem="0cN-Pn-KT0" firstAttribute="top" secondItem="Q4A-Ln-SIK" secondAttribute="bottom" id="l8p-f8-MVp"/>
+                            <constraint firstAttribute="trailing" secondItem="grj-2b-7yB" secondAttribute="trailing" id="lF7-Jm-L3v"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="acButton" destination="aR2-LS-EgU" id="MNl-DG-Kz1"/>
+                        <outlet property="displayLable" destination="seG-eR-bMb" id="e5i-sR-NXj"/>
+                        <outletCollection property="specialButtons" destination="uQv-HO-4QX" collectionClass="NSMutableArray" id="Q3n-FK-Ph0"/>
+                        <outletCollection property="specialButtons" destination="9Ql-Rs-wfa" collectionClass="NSMutableArray" id="FNQ-t3-b5S"/>
+                        <outletCollection property="digitalButtons" destination="FHM-kv-PI4" collectionClass="NSMutableArray" id="r0D-N8-RJ2"/>
+                        <outletCollection property="digitalButtons" destination="uI0-JW-E6J" collectionClass="NSMutableArray" id="80W-kZ-FYz"/>
+                        <outletCollection property="digitalButtons" destination="vWb-Dn-Kpy" collectionClass="NSMutableArray" id="jVh-RC-Yyc"/>
+                        <outletCollection property="digitalButtons" destination="2wv-OD-ELP" collectionClass="NSMutableArray" id="ftu-ZT-7uA"/>
+                        <outletCollection property="digitalButtons" destination="F9f-jx-ddH" collectionClass="NSMutableArray" id="ELp-Hc-T9g"/>
+                        <outletCollection property="digitalButtons" destination="bHy-yZ-cJu" collectionClass="NSMutableArray" id="Vhm-Uh-dhX"/>
+                        <outletCollection property="digitalButtons" destination="wsO-xZ-eyg" collectionClass="NSMutableArray" id="UOq-tV-7aG"/>
+                        <outletCollection property="digitalButtons" destination="ogy-Pw-kgO" collectionClass="NSMutableArray" id="h2g-fb-Nlb"/>
+                        <outletCollection property="digitalButtons" destination="usv-MX-dK1" collectionClass="NSMutableArray" id="twV-Sl-wYt"/>
+                        <outletCollection property="digitalButtons" destination="BV3-1K-skU" collectionClass="NSMutableArray" id="IjA-em-CaE"/>
+                        <outletCollection property="digitalButtons" destination="1pQ-9M-B3O" collectionClass="NSMutableArray" id="O5x-RT-2hO"/>
+                        <outletCollection property="mathOperationButtons" destination="3zA-KD-ge5" collectionClass="NSMutableArray" id="AUT-u9-qru"/>
+                        <outletCollection property="mathOperationButtons" destination="ahh-u0-tgI" collectionClass="NSMutableArray" id="Tq5-6m-cOb"/>
+                        <outletCollection property="mathOperationButtons" destination="q4f-fc-PZc" collectionClass="NSMutableArray" id="LIf-4f-6Am"/>
+                        <outletCollection property="mathOperationButtons" destination="6QW-iw-8Z2" collectionClass="NSMutableArray" id="fnM-9N-N9o"/>
+                        <outletCollection property="mathOperationButtons" destination="QMC-D1-Gbx" collectionClass="NSMutableArray" id="hox-m0-p40"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133.125" y="136.26760563380282"/>
         </scene>
     </scenes>
 </document>

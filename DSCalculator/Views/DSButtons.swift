@@ -10,12 +10,16 @@ import UIKit
 
 class DSButtons: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setButton()
     }
-    */
+    
+    func setButton() {
+        self.layer.cornerRadius = 10
+        self.layer.borderWidth = 3
+        self.layer.borderColor = UIColor.lightGray.cgColor
 
+    }
 }
