@@ -14,6 +14,7 @@
 		042225591F2A141900C0F0A0 /* DSButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042225581F2A141900C0F0A0 /* DSButtons.swift */; };
 		0422255D1F2A194100C0F0A0 /* DSCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422255C1F2A194100C0F0A0 /* DSCalculator.swift */; };
 		042225621F2A1B4500C0F0A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042225611F2A1B4500C0F0A0 /* ViewController.swift */; };
+		0472F9481F34ED9300FB7A8B /* DSManagerOfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472F9471F34ED9300FB7A8B /* DSManagerOfCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		042225581F2A141900C0F0A0 /* DSButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSButtons.swift; sourceTree = "<group>"; };
 		0422255C1F2A194100C0F0A0 /* DSCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSCalculator.swift; sourceTree = "<group>"; };
 		042225611F2A1B4500C0F0A0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0472F9471F34ED9300FB7A8B /* DSManagerOfCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSManagerOfCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +91,18 @@
 		042225601F2A1B4500C0F0A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0472F9461F34ED4E00FB7A8B /* Managers */,
 				042225611F2A1B4500C0F0A0 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0472F9461F34ED4E00FB7A8B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0472F9471F34ED9300FB7A8B /* DSManagerOfCalculator.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				042225621F2A1B4500C0F0A0 /* ViewController.swift in Sources */,
+				0472F9481F34ED9300FB7A8B /* DSManagerOfCalculator.swift in Sources */,
 				042225591F2A141900C0F0A0 /* DSButtons.swift in Sources */,
 				0422255D1F2A194100C0F0A0 /* DSCalculator.swift in Sources */,
 				042225421F28C7EF00C0F0A0 /* AppDelegate.swift in Sources */,

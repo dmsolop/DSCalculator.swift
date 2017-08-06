@@ -14,7 +14,6 @@ class DSCalculator {
         case sum = 1, subtract, multiply, divide, changeSign
     }
     
-    var mathOperation = MathOperations.sum
     var accumulator: Double = 0
     
     func clear() {
@@ -53,7 +52,7 @@ class DSCalculator {
     
     func resultCalculation(operand secondValue: Double, mathSign sign: Int) -> Double {
         
-        mathOperation = DSCalculator.MathOperations(rawValue: sign)!
+        guard let mathOperation = DSCalculator.MathOperations(rawValue: sign) else { return 0 }
 
             switch mathOperation {
             case .sum:

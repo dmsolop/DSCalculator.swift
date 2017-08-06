@@ -16,13 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet var digitalButtons: [DSButtons]!
     @IBOutlet var mathOperationButtons: [DSButtons]!
     
-    let calculator = DSCalculator()
-    var mathOperationType: Int?
-    var operandInString: String = ""
-    var secondDigit: Double = 0
-    var isSecondDigitEditing: Bool = false
-    var isComma: Bool = false
-    
+    let managerCalculator = DSManagerOfCalculator()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         }
@@ -34,62 +29,35 @@ class ViewController: UIViewController {
         }
     }
     
-    func resetBaseParameters() {
-        isSecondDigitEditing = false
-        isComma = false
-    }
-
-    func handlerToCalculator () {
-        guard let mathOperationSign = mathOperationType else { return }
-        let result: Double = calculator.resultCalculation(operand: secondDigit, mathSign: mathOperationSign)
-        displayLable.text = "\(result)"
-    }
-    
     //MARK: - ActionMethods
     
     @IBAction func inputNumberrButtonPressed(_ sender: DSButtons) {
-        
-        if isComma && sender.tag == 10 { return }
-        var signFromTag: String = ""
-        
-        if sender.tag == 10 {
-            signFromTag = "."
-            isComma = true
-        } else {
-            signFromTag = "\(sender.tag)"
-        }
-        operandInString .append(signFromTag)
+        managerCalculator.inputNumber(sender.tag)
+        displayLable.text = managerCalculator.operandInString
         
         if acButton.titleLabel?.text == "AC" {
             acButton .setTitle("C", for: UIControlState.normal)
         }
         resetBorderButtons(buttons1: mathOperationButtons, buttons2: digitalButtons)
         sender.layer.borderColor = UIColor.gray.cgColor
-
-        guard let operandInDigit: Double = Double(operandInString) else { return }
-
-        if !isSecondDigitEditing {
-            calculator.accumulator = operandInDigit
-        } else {
-            secondDigit = operandInDigit
-        }
-        displayLable.text = "\(operandInDigit)"
     }
 
     @IBAction func inputMathSignButtonPressed(_ sender: DSButtons) {
+        if let displayText = managerCalculator.inputMathSign(sender.tag, text: displayLable.text) {
+            displayLable.text = displayText
+        }
+        
         resetBorderButtons(buttons1: mathOperationButtons, buttons2: digitalButtons)
-        isComma = false
-        operandInString = ""
-        mathOperationType = sender.tag
-        isSecondDigitEditing = true
         sender.layer.borderColor = UIColor.gray.cgColor
     }
     
     @IBAction func resultButtonPressed(_ sender: DSButtons) {
-        handlerToCalculator()
+        guard let displayText = managerCalculator.handlerToCalculator() else { return }
+        displayLable.text = displayText
+        managerCalculator.operandInString = displayLable.text!
+        managerCalculator.resultPressed()
+        
         resetBorderButtons(buttons1: mathOperationButtons, buttons2: digitalButtons)
-        operandInString = displayLable.text!
-        resetBaseParameters()
     }
     
     
@@ -97,24 +65,19 @@ class ViewController: UIViewController {
         resetBorderButtons(buttons1: mathOperationButtons, buttons2: digitalButtons)
         acButton .setTitle("AC", for: UIControlState.normal)
         displayLable.text = "0"
-        operandInString = ""
-        calculator.clear()
-        resetBaseParameters()
+        
+        managerCalculator.clearResultPressed()
     }
     
     @IBAction func changeSignButtonPressed(_ sender: DSButtons) {
-        mathOperationType = sender.tag
-        handlerToCalculator()
+        managerCalculator.mathOperationType = sender.tag
+        displayLable.text = managerCalculator.handlerToCalculator()
     }
     
     @IBAction func percentsButtonPressed(_ sender: DSButtons) {
-        
-        guard let mathOperationSign = mathOperationType else { return }
-        let result: Double = calculator.calculationPercent(operand: secondDigit, mathSign: mathOperationSign)
-        displayLable.text = "\(result)"
         resetBorderButtons(buttons1: mathOperationButtons, buttons2: digitalButtons)
-        operandInString = displayLable.text!
-        resetBaseParameters()
+
+        displayLable.text = managerCalculator.percentPressed(text: displayLable.text)
     }
 }
 
