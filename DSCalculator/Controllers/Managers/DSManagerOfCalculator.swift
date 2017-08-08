@@ -9,8 +9,9 @@
 import UIKit
 
 class DSManagerOfCalculator {
-
-    let calculator = DSCalculator()
+    
+    
+    let calculator = DSCalculator.sharedInstance
     var mathOperationType: Int?
     var operandInString = ""
     var secondDigit: Double?

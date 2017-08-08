@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DOe-la-sI4">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="t2R-eH-DPc">
+            <objects>
+                <viewController storyboardIdentifier="SecondStoryboard" id="DOe-la-sI4" customClass="SecondViewController" customModule="DSCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dlN-nL-6Tz"/>
+                        <viewControllerLayoutGuide type="bottom" id="MGq-Ay-Neu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kOx-vS-p5p">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdT-JF-gQy">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="78"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAV-jw-xdD">
+                                        <rect key="frame" x="8" y="19" width="720" height="51"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.59994113445281982" green="0.60004258155822754" blue="0.59991961717605591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mAV-jw-xdD" secondAttribute="trailing" constant="8" id="57b-6H-Mlt"/>
+                                    <constraint firstItem="mAV-jw-xdD" firstAttribute="leading" secondItem="OdT-JF-gQy" secondAttribute="leading" constant="8" id="9Zb-3N-Rhg"/>
+                                    <constraint firstAttribute="bottom" secondItem="mAV-jw-xdD" secondAttribute="bottom" constant="8" id="H2j-i2-YIh"/>
+                                    <constraint firstItem="mAV-jw-xdD" firstAttribute="top" secondItem="OdT-JF-gQy" secondAttribute="top" constant="19" id="P3f-5f-02m"/>
+                                    <constraint firstAttribute="width" priority="750" constant="667" id="Yan-cw-Zc8"/>
+                                    <constraint firstAttribute="height" priority="750" constant="78" id="vRE-d1-Yyr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5l-xE-B1i">
+                                <rect key="frame" x="0.0" y="78" width="736" height="336"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHN-3E-FmJ" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="662.33333333333348" y="271.33333333333326" width="66.666666666666629" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="60" id="e8U-XR-gTI"/>
+                                            <constraint firstAttribute="height" priority="750" constant="50" id="zrA-bE-XZj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="=">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resultButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="vlC-Io-juc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-0W-PiV" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="589.33333333333337" y="271.33333333333326" width="67" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title=",">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="knW-sA-hzx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmy-5x-rKY" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="443.00000000000006" y="271.33333333333326" width="140.33333333333343" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="126" id="Shl-hD-ILi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="0">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="ZzG-O1-PFN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQZ-Lr-bf0" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="370.66666666666674" y="271.33333333333326" width="66.333333333333314" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g18-Yc-KKD" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="298" y="271.33333333333326" width="66.666666666666686" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeN-i9-Vgo" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="224.66666666666663" y="271.33333333333326" width="67.333333333333371" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh0-oW-SBD" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="151.66666666666666" y="271.33333333333326" width="67" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYn-4R-5zr" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="78.666666666666657" y="271.33333333333326" width="66.999999999999972" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jn-D9-chn" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="271.33333333333326" width="66.666666666666671" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvY-X1-pXg" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="662.33333333333348" y="205" width="66.666666666666629" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="8zz-AE-3Gt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBn-XZ-hjx" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="662.33333333333348" y="139.33333333333337" width="66.666666666666629" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="neg-2G-Joc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wML-Ca-DuZ" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="662.33333333333348" y="73.666666666666657" width="66.666666666666629" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="x">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="oop-iE-WaM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yU-bA-evX" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="662.33333333333348" y="8" width="66.666666666666629" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.96170860528945923" green="0.57022708654403687" blue="0.19434243440628052" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="/">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputMathSignButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="cBa-el-5QS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-HL-d6W" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="589.33333333333337" y="205" width="67" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="O7L-VL-Ok9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZzW-UG-6pD" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="516.33333333333337" y="205" width="67" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="jOn-MU-6SW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gJ-eT-fzw" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="443" y="205" width="67.333333333333314" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="uxn-1n-Xia"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rx2-7z-2Tb" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="370.66666666666674" y="205" width="66.333333333333314" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBS-NB-NAu" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="224.66666666666663" y="205" width="67.333333333333371" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2k-VE-wgb" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="151.66666666666666" y="205" width="67" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TV-63-6qf" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="78.666666666666657" y="205" width="66.999999999999972" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0W-hD-oUF" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="205" width="66.666666666666671" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHR-0j-zjK" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="589.33333333333337" y="139.33333333333337" width="67" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="Ahg-at-UsZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYQ-34-xwt" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="516.33333333333337" y="139.33333333333337" width="67" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="nLi-NM-q7m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50H-Xf-XyH" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="443" y="139.33333333333337" width="67.333333333333314" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="RUz-Od-kbB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXB-u4-40Q" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="370.66666666666674" y="139.33333333333337" width="66.333333333333314" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rI5-Jm-jOz" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="298" y="139.33333333333337" width="66.666666666666686" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rap-sO-yBv" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="224.66666666666663" y="139.33333333333337" width="67.333333333333371" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bau-mo-x0x" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="151.66666666666666" y="139.33333333333337" width="67" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESM-GW-unI" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="78.666666666666657" y="139.33333333333337" width="66.999999999999972" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fo-KF-2D0" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="139.33333333333337" width="66.666666666666671" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2J-tb-LNh" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="589.33333333333337" y="73.666666666666657" width="67" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="8iL-Kc-s2F"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOK-Yg-ZfC" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="516.33333333333337" y="73.666666666666657" width="67" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="7vk-Js-a1s"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY7-e6-IwI" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="443" y="73.666666666666657" width="67.333333333333314" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.87834745645523071" green="0.87849199771881104" blue="0.87831676006317139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="inputNumberrButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="ZmE-6A-Yp7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkk-QE-0HV" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="370.66666666666674" y="73.666666666666657" width="66.333333333333314" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lef-yc-hMW" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="298" y="73.666666666666657" width="66.666666666666686" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIt-GI-IOq" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="224.66666666666663" y="73.666666666666657" width="67.333333333333371" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-wx-7RE" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="151.66666666666666" y="73.666666666666657" width="67" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjm-WD-gCy" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="78.666666666666657" y="73.666666666666657" width="66.999999999999972" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9i-Sb-fuf" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="73.666666666666657" width="66.666666666666671" height="57.666666666666686"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvh-Cj-bAG" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="589.33333333333337" y="8" width="67" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="-/+">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSignButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="Nzr-dj-fCb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMm-p0-pSb" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="516.33333333333337" y="8" width="67" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="percentsButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="Za2-8P-ONf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRT-9U-iCc" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="443" y="8" width="67.333333333333314" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal" title="AC">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearResultButtonPressed:" destination="DOe-la-sI4" eventType="touchUpInside" id="TyW-iH-GgB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHW-sF-HAS" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="370.66666666666674" y="8" width="66.333333333333314" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KU-TT-iSs" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="298" y="8" width="66.666666666666686" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAg-Cr-V7d" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="224.66666666666663" y="8" width="67.333333333333371" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLq-jB-2Mv" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="151.66666666666666" y="8" width="67" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzK-iB-AA2" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="78.666666666666657" y="8" width="66.999999999999972" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqb-zD-mlA" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="8" width="66.666666666666671" height="57.666666666666657"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNm-AY-KKH" customClass="DSButtons" customModule="DSCalculator" customModuleProvider="target">
+                                        <rect key="frame" x="298" y="205" width="66.666666666666686" height="58.333333333333314"/>
+                                        <color key="backgroundColor" red="0.83913534879684448" green="0.83927375078201294" blue="0.83910590410232544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77661186456680298" green="0.78427004814147949" blue="0.78427129983901978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="50H-Xf-XyH" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="0bS-Aw-HDB"/>
+                                    <constraint firstItem="S9i-Sb-fuf" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="0cF-fQ-caT"/>
+                                    <constraint firstItem="9KU-TT-iSs" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="0l3-kR-Nkf"/>
+                                    <constraint firstItem="TBS-NB-NAu" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="1Bd-N6-DcT"/>
+                                    <constraint firstItem="oYQ-34-xwt" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="1Xc-2a-GqA"/>
+                                    <constraint firstItem="dzK-iB-AA2" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="2Jx-vo-Kue"/>
+                                    <constraint firstItem="S9i-Sb-fuf" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="bottom" constant="8" id="2R0-Sc-7y9"/>
+                                    <constraint firstItem="yvY-X1-pXg" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="2US-S1-grU"/>
+                                    <constraint firstItem="xYn-4R-5zr" firstAttribute="leading" secondItem="2jn-D9-chn" secondAttribute="trailing" constant="6" id="2vL-lA-6Ly"/>
+                                    <constraint firstItem="zLq-jB-2Mv" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="37T-eq-Rvm"/>
+                                    <constraint firstItem="6TV-63-6qf" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="3Bw-Jt-tb6"/>
+                                    <constraint firstItem="TBS-NB-NAu" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="3ub-VG-0B0"/>
+                                    <constraint firstItem="4fo-KF-2D0" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="41n-j8-A7u"/>
+                                    <constraint firstItem="kIt-GI-IOq" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="4m4-lI-NFf"/>
+                                    <constraint firstItem="hHR-0j-zjK" firstAttribute="leading" secondItem="oYQ-34-xwt" secondAttribute="trailing" constant="6" id="4r2-4i-P2Y"/>
+                                    <constraint firstItem="W2k-VE-wgb" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="55P-Gc-Phz"/>
+                                    <constraint firstItem="bau-mo-x0x" firstAttribute="top" secondItem="s3f-wx-7RE" secondAttribute="bottom" constant="8" id="5FP-0n-Cw9"/>
+                                    <constraint firstItem="ESM-GW-unI" firstAttribute="top" secondItem="xjm-WD-gCy" secondAttribute="bottom" constant="8" id="5QC-9r-b6a"/>
+                                    <constraint firstItem="ZzW-UG-6pD" firstAttribute="leading" secondItem="6gJ-eT-fzw" secondAttribute="trailing" constant="6" id="5WW-Wd-Eyd"/>
+                                    <constraint firstItem="VBn-XZ-hjx" firstAttribute="leading" secondItem="hHR-0j-zjK" secondAttribute="trailing" constant="6" id="5rF-b8-Pp0"/>
+                                    <constraint firstItem="VBn-XZ-hjx" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="62t-ge-1ej"/>
+                                    <constraint firstItem="ZzW-UG-6pD" firstAttribute="top" secondItem="oYQ-34-xwt" secondAttribute="bottom" constant="8" id="6aJ-1g-hp5"/>
+                                    <constraint firstItem="xjm-WD-gCy" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="6x0-bb-eoP"/>
+                                    <constraint firstItem="50H-Xf-XyH" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="7XU-kx-y5g"/>
+                                    <constraint firstItem="s3f-wx-7RE" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="7Xh-4D-QrW"/>
+                                    <constraint firstItem="6gJ-eT-fzw" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="7uK-Jx-F2s"/>
+                                    <constraint firstItem="g18-Yc-KKD" firstAttribute="top" secondItem="lNm-AY-KKH" secondAttribute="bottom" constant="8" id="8Kj-U8-ceI"/>
+                                    <constraint firstItem="xjm-WD-gCy" firstAttribute="leading" secondItem="S9i-Sb-fuf" secondAttribute="trailing" constant="6" id="8x1-gl-jJm"/>
+                                    <constraint firstItem="lef-yc-hMW" firstAttribute="top" secondItem="9KU-TT-iSs" secondAttribute="bottom" constant="8" id="9bH-rX-dPf"/>
+                                    <constraint firstItem="lNm-AY-KKH" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="9eq-cv-ZmK"/>
+                                    <constraint firstItem="bau-mo-x0x" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="9m6-8T-GCZ"/>
+                                    <constraint firstItem="6TV-63-6qf" firstAttribute="leading" secondItem="f0W-hD-oUF" secondAttribute="trailing" constant="6" id="AI8-Io-1Bh"/>
+                                    <constraint firstItem="s3f-wx-7RE" firstAttribute="leading" secondItem="xjm-WD-gCy" secondAttribute="trailing" constant="6" id="AyO-bw-tEB"/>
+                                    <constraint firstItem="W2k-VE-wgb" firstAttribute="leading" secondItem="6TV-63-6qf" secondAttribute="trailing" constant="6" id="B9P-6Y-1AG"/>
+                                    <constraint firstItem="rx2-7z-2Tb" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="BNz-zf-GCX"/>
+                                    <constraint firstItem="2jn-D9-chn" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="BQY-eK-5Xg"/>
+                                    <constraint firstItem="s3f-wx-7RE" firstAttribute="top" secondItem="zLq-jB-2Mv" secondAttribute="bottom" constant="8" id="Bac-Gs-gQp"/>
+                                    <constraint firstItem="AMm-p0-pSb" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="BbA-jO-tVD"/>
+                                    <constraint firstItem="ZzW-UG-6pD" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="Bzb-G7-qCy"/>
+                                    <constraint firstItem="Dkc-0W-PiV" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="CBI-bY-Xkj"/>
+                                    <constraint firstItem="wY7-e6-IwI" firstAttribute="leading" secondItem="dkk-QE-0HV" secondAttribute="trailing" constant="6" id="CGh-6A-Muw"/>
+                                    <constraint firstItem="50H-Xf-XyH" firstAttribute="top" secondItem="wY7-e6-IwI" secondAttribute="bottom" constant="8" id="D0w-g7-mse"/>
+                                    <constraint firstItem="AMm-p0-pSb" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="DNY-83-xxZ"/>
+                                    <constraint firstItem="wML-Ca-DuZ" firstAttribute="top" secondItem="0yU-bA-evX" secondAttribute="bottom" constant="8" id="DO2-OJ-6AR"/>
+                                    <constraint firstItem="LHN-3E-FmJ" firstAttribute="leading" secondItem="Dkc-0W-PiV" secondAttribute="trailing" constant="6" id="DOp-dR-WbD"/>
+                                    <constraint firstItem="cvh-Cj-bAG" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="DPV-Xa-LWa"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wh0-oW-SBD" secondAttribute="bottom" constant="7" id="DzC-Wh-13t"/>
+                                    <constraint firstItem="g18-Yc-KKD" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="ECT-n7-JiC"/>
+                                    <constraint firstItem="JOK-Yg-ZfC" firstAttribute="top" secondItem="AMm-p0-pSb" secondAttribute="bottom" constant="8" id="EWc-Hl-sFt"/>
+                                    <constraint firstItem="Iqb-zD-mlA" firstAttribute="top" secondItem="c5l-xE-B1i" secondAttribute="top" constant="8" id="EfE-xv-lud"/>
+                                    <constraint firstItem="0yU-bA-evX" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="F5m-4L-GPd"/>
+                                    <constraint firstItem="JOK-Yg-ZfC" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="G18-I4-qbJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="LHN-3E-FmJ" secondAttribute="trailing" constant="7" id="GDz-XC-fBB"/>
+                                    <constraint firstItem="ymb-HL-d6W" firstAttribute="top" secondItem="hHR-0j-zjK" secondAttribute="bottom" constant="8" id="GLq-m8-ud1"/>
+                                    <constraint firstItem="kIt-GI-IOq" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="GWP-kU-Ddr"/>
+                                    <constraint firstItem="AMm-p0-pSb" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="H8K-N1-phj"/>
+                                    <constraint firstItem="QQZ-Lr-bf0" firstAttribute="top" secondItem="rx2-7z-2Tb" secondAttribute="bottom" constant="8" id="HSp-7y-l5x"/>
+                                    <constraint firstAttribute="bottom" secondItem="g18-Yc-KKD" secondAttribute="bottom" constant="7" id="Her-k5-z4Z"/>
+                                    <constraint firstItem="6TV-63-6qf" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="HvV-8D-oGD"/>
+                                    <constraint firstItem="dkk-QE-0HV" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="I9Y-SK-cFi"/>
+                                    <constraint firstItem="pAg-Cr-V7d" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="IB1-gD-XE9"/>
+                                    <constraint firstItem="g2J-tb-LNh" firstAttribute="leading" secondItem="JOK-Yg-ZfC" secondAttribute="trailing" constant="6" id="IJR-D0-OpK"/>
+                                    <constraint firstItem="hHR-0j-zjK" firstAttribute="top" secondItem="g2J-tb-LNh" secondAttribute="bottom" constant="8" id="Iv8-r8-g0C"/>
+                                    <constraint firstItem="Zmy-5x-rKY" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="JBi-Ae-Vg9"/>
+                                    <constraint firstItem="2jn-D9-chn" firstAttribute="leading" secondItem="Iqb-zD-mlA" secondAttribute="leading" id="JKQ-ca-mnf"/>
+                                    <constraint firstItem="xjm-WD-gCy" firstAttribute="top" secondItem="dzK-iB-AA2" secondAttribute="bottom" constant="8" id="JQq-Ch-4VV"/>
+                                    <constraint firstItem="Rap-sO-yBv" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="K3C-qw-9Ia"/>
+                                    <constraint firstItem="XRT-9U-iCc" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="KMr-X0-Cjl"/>
+                                    <constraint firstItem="jXB-u4-40Q" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="KPz-3c-7Qo"/>
+                                    <constraint firstItem="NeN-i9-Vgo" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="KQY-rp-YMl"/>
+                                    <constraint firstItem="bau-mo-x0x" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="KXP-RZ-co0"/>
+                                    <constraint firstItem="lNm-AY-KKH" firstAttribute="top" secondItem="rI5-Jm-jOz" secondAttribute="bottom" constant="8" id="KZT-j2-ru2"/>
+                                    <constraint firstItem="s3f-wx-7RE" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="L3J-1c-ISk"/>
+                                    <constraint firstItem="Iqb-zD-mlA" firstAttribute="leading" secondItem="c5l-xE-B1i" secondAttribute="leading" constant="6" id="L51-Nc-vaD"/>
+                                    <constraint firstItem="Rap-sO-yBv" firstAttribute="top" secondItem="kIt-GI-IOq" secondAttribute="bottom" constant="8" id="LNf-LK-wfs"/>
+                                    <constraint firstAttribute="bottom" secondItem="xYn-4R-5zr" secondAttribute="bottom" constant="7" id="LZO-e3-dpp"/>
+                                    <constraint firstItem="2jn-D9-chn" firstAttribute="top" secondItem="f0W-hD-oUF" secondAttribute="bottom" constant="8" id="LyD-pD-ICn"/>
+                                    <constraint firstItem="pAg-Cr-V7d" firstAttribute="leading" secondItem="zLq-jB-2Mv" secondAttribute="trailing" constant="6" id="MER-iG-UFs"/>
+                                    <constraint firstItem="dzK-iB-AA2" firstAttribute="leading" secondItem="Iqb-zD-mlA" secondAttribute="trailing" constant="6" id="MM0-Tw-rei"/>
+                                    <constraint firstItem="xjm-WD-gCy" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="MXx-VP-KNI"/>
+                                    <constraint firstItem="Rap-sO-yBv" firstAttribute="leading" secondItem="bau-mo-x0x" secondAttribute="trailing" constant="6" id="N06-6V-i0m"/>
+                                    <constraint firstItem="jXB-u4-40Q" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="NXR-aP-sSz"/>
+                                    <constraint firstItem="W2k-VE-wgb" firstAttribute="top" secondItem="bau-mo-x0x" secondAttribute="bottom" constant="8" id="NZi-B0-2Ml"/>
+                                    <constraint firstItem="xYn-4R-5zr" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="Nua-XL-1x7"/>
+                                    <constraint firstItem="jXB-u4-40Q" firstAttribute="top" secondItem="dkk-QE-0HV" secondAttribute="bottom" constant="8" id="Nyr-VK-K8l"/>
+                                    <constraint firstItem="VBn-XZ-hjx" firstAttribute="top" secondItem="wML-Ca-DuZ" secondAttribute="bottom" constant="8" id="Ocs-Y6-yqN"/>
+                                    <constraint firstItem="rI5-Jm-jOz" firstAttribute="leading" secondItem="Rap-sO-yBv" secondAttribute="trailing" constant="6" id="OdG-NS-96m"/>
+                                    <constraint firstItem="dkk-QE-0HV" firstAttribute="top" secondItem="oHW-sF-HAS" secondAttribute="bottom" constant="8" id="PNv-83-dwu"/>
+                                    <constraint firstItem="wML-Ca-DuZ" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="Q1G-sI-A7t"/>
+                                    <constraint firstItem="6gJ-eT-fzw" firstAttribute="leading" secondItem="rx2-7z-2Tb" secondAttribute="trailing" constant="6" id="QKA-cz-YZ6"/>
+                                    <constraint firstItem="xYn-4R-5zr" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="QO0-5z-7hH"/>
+                                    <constraint firstItem="f0W-hD-oUF" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="QTX-dI-8Tg"/>
+                                    <constraint firstItem="cvh-Cj-bAG" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="Qb8-3c-83a"/>
+                                    <constraint firstItem="rx2-7z-2Tb" firstAttribute="leading" secondItem="lNm-AY-KKH" secondAttribute="trailing" constant="6" id="Rab-2q-vJJ"/>
+                                    <constraint firstItem="ESM-GW-unI" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="RtT-nc-XS1"/>
+                                    <constraint firstItem="wML-Ca-DuZ" firstAttribute="leading" secondItem="g2J-tb-LNh" secondAttribute="trailing" constant="6" id="Rua-38-2cd"/>
+                                    <constraint firstItem="zLq-jB-2Mv" firstAttribute="leading" secondItem="dzK-iB-AA2" secondAttribute="trailing" constant="6" id="SAp-wi-XGA"/>
+                                    <constraint firstItem="kIt-GI-IOq" firstAttribute="leading" secondItem="s3f-wx-7RE" secondAttribute="trailing" constant="6" id="SFW-5x-tFE"/>
+                                    <constraint firstAttribute="bottom" secondItem="QQZ-Lr-bf0" secondAttribute="bottom" constant="7" id="Sd9-am-nlc"/>
+                                    <constraint firstAttribute="trailing" secondItem="VBn-XZ-hjx" secondAttribute="trailing" constant="7" id="SqF-JT-oYi"/>
+                                    <constraint firstItem="kIt-GI-IOq" firstAttribute="top" secondItem="pAg-Cr-V7d" secondAttribute="bottom" constant="8" id="TAm-6r-Xwf"/>
+                                    <constraint firstItem="rI5-Jm-jOz" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="Tek-sX-YQw"/>
+                                    <constraint firstItem="rI5-Jm-jOz" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="Tl9-I8-VYI"/>
+                                    <constraint firstItem="LHN-3E-FmJ" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="Tyv-xF-aJy"/>
+                                    <constraint firstItem="6gJ-eT-fzw" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="U5X-n8-4d7"/>
+                                    <constraint firstItem="lNm-AY-KKH" firstAttribute="leading" secondItem="TBS-NB-NAu" secondAttribute="trailing" constant="6" id="UjL-uM-Dus"/>
+                                    <constraint firstItem="rx2-7z-2Tb" firstAttribute="top" secondItem="jXB-u4-40Q" secondAttribute="bottom" constant="8" id="UpV-h6-0xo"/>
+                                    <constraint firstItem="6TV-63-6qf" firstAttribute="top" secondItem="ESM-GW-unI" secondAttribute="bottom" constant="8" id="VNx-1j-76G"/>
+                                    <constraint firstItem="QQZ-Lr-bf0" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="VUM-MO-5H6"/>
+                                    <constraint firstItem="NeN-i9-Vgo" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="Ve2-64-3P9"/>
+                                    <constraint firstItem="TBS-NB-NAu" firstAttribute="top" secondItem="Rap-sO-yBv" secondAttribute="bottom" constant="8" id="Vwf-Q5-WuI"/>
+                                    <constraint firstItem="QQZ-Lr-bf0" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="WBQ-w1-daw"/>
+                                    <constraint firstItem="wY7-e6-IwI" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="WDy-mJ-4kI"/>
+                                    <constraint firstItem="g2J-tb-LNh" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="WPl-5p-m9r"/>
+                                    <constraint firstItem="g2J-tb-LNh" firstAttribute="top" secondItem="cvh-Cj-bAG" secondAttribute="bottom" constant="8" id="Y5W-J9-eRp"/>
+                                    <constraint firstItem="NeN-i9-Vgo" firstAttribute="top" secondItem="TBS-NB-NAu" secondAttribute="bottom" constant="8" id="YdB-GA-3HZ"/>
+                                    <constraint firstItem="Wh0-oW-SBD" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="YuY-9R-CAX"/>
+                                    <constraint firstItem="yvY-X1-pXg" firstAttribute="top" secondItem="VBn-XZ-hjx" secondAttribute="bottom" constant="8" id="ZP1-4l-aa9"/>
+                                    <constraint firstItem="pAg-Cr-V7d" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="Zbj-DX-BH9"/>
+                                    <constraint firstItem="wML-Ca-DuZ" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="Zpy-7O-PBt"/>
+                                    <constraint firstItem="lef-yc-hMW" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="a1y-VS-wLx"/>
+                                    <constraint firstItem="ymb-HL-d6W" firstAttribute="leading" secondItem="ZzW-UG-6pD" secondAttribute="trailing" constant="6" id="aOf-3M-1fq"/>
+                                    <constraint firstItem="Dkc-0W-PiV" firstAttribute="leading" secondItem="Zmy-5x-rKY" secondAttribute="trailing" constant="6" id="aaw-Hc-2TO"/>
+                                    <constraint firstItem="lef-yc-hMW" firstAttribute="leading" secondItem="kIt-GI-IOq" secondAttribute="trailing" constant="6" id="aci-Z0-KHg"/>
+                                    <constraint firstItem="Zmy-5x-rKY" firstAttribute="leading" secondItem="QQZ-Lr-bf0" secondAttribute="trailing" constant="6" id="c0O-Ha-7UK"/>
+                                    <constraint firstItem="f0W-hD-oUF" firstAttribute="top" secondItem="4fo-KF-2D0" secondAttribute="bottom" constant="8" id="cMh-Oc-byT"/>
+                                    <constraint firstItem="ESM-GW-unI" firstAttribute="leading" secondItem="4fo-KF-2D0" secondAttribute="trailing" constant="6" id="cUs-t3-0MK"/>
+                                    <constraint firstItem="6gJ-eT-fzw" firstAttribute="top" secondItem="50H-Xf-XyH" secondAttribute="bottom" constant="8" id="cda-JB-Huk"/>
+                                    <constraint firstItem="JOK-Yg-ZfC" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="dLT-0e-xHD"/>
+                                    <constraint firstItem="yvY-X1-pXg" firstAttribute="leading" secondItem="ymb-HL-d6W" secondAttribute="trailing" constant="6" id="dOS-Cw-bzR"/>
+                                    <constraint firstItem="rI5-Jm-jOz" firstAttribute="top" secondItem="lef-yc-hMW" secondAttribute="bottom" constant="8" id="dRQ-td-dyf"/>
+                                    <constraint firstItem="ymb-HL-d6W" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="da7-9V-JmM"/>
+                                    <constraint firstItem="yvY-X1-pXg" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="eNW-rJ-R8R"/>
+                                    <constraint firstAttribute="trailing" secondItem="0yU-bA-evX" secondAttribute="trailing" constant="7" id="eWl-bw-Fxa"/>
+                                    <constraint firstItem="dzK-iB-AA2" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="f7I-Ir-VH2"/>
+                                    <constraint firstItem="zLq-jB-2Mv" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="fIR-lp-6BB"/>
+                                    <constraint firstItem="dkk-QE-0HV" firstAttribute="leading" secondItem="lef-yc-hMW" secondAttribute="trailing" constant="6" id="fVj-bC-QuB"/>
+                                    <constraint firstItem="XRT-9U-iCc" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="fZW-pj-FwX"/>
+                                    <constraint firstItem="Dkc-0W-PiV" firstAttribute="top" secondItem="ymb-HL-d6W" secondAttribute="bottom" constant="8" id="fmv-gA-7NI"/>
+                                    <constraint firstItem="ESM-GW-unI" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="ftf-Oj-ymN"/>
+                                    <constraint firstItem="Zmy-5x-rKY" firstAttribute="top" secondItem="6gJ-eT-fzw" secondAttribute="bottom" constant="8" id="gk2-eO-gE1"/>
+                                    <constraint firstItem="NeN-i9-Vgo" firstAttribute="leading" secondItem="Wh0-oW-SBD" secondAttribute="trailing" constant="6" id="h9V-RZ-LZ4"/>
+                                    <constraint firstItem="Zmy-5x-rKY" firstAttribute="top" secondItem="ZzW-UG-6pD" secondAttribute="bottom" constant="8" id="hOd-bb-p74"/>
+                                    <constraint firstItem="oHW-sF-HAS" firstAttribute="leading" secondItem="9KU-TT-iSs" secondAttribute="trailing" constant="6" id="hSm-zb-GM0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dkc-0W-PiV" secondAttribute="bottom" constant="7" id="hcG-HA-RdG"/>
+                                    <constraint firstItem="oHW-sF-HAS" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="hii-vH-7le"/>
+                                    <constraint firstItem="jXB-u4-40Q" firstAttribute="leading" secondItem="rI5-Jm-jOz" secondAttribute="trailing" constant="6" id="hnY-8k-1t4"/>
+                                    <constraint firstItem="S9i-Sb-fuf" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="i0b-6w-Oy9"/>
+                                    <constraint firstItem="XRT-9U-iCc" firstAttribute="leading" secondItem="oHW-sF-HAS" secondAttribute="trailing" constant="6" id="iO5-a6-e0v"/>
+                                    <constraint firstItem="XRT-9U-iCc" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="iQS-Py-erx"/>
+                                    <constraint firstItem="xYn-4R-5zr" firstAttribute="top" secondItem="6TV-63-6qf" secondAttribute="bottom" constant="8" id="iaS-TP-rov"/>
+                                    <constraint firstItem="f0W-hD-oUF" firstAttribute="leading" secondItem="Iqb-zD-mlA" secondAttribute="leading" id="jb8-Zj-cyY"/>
+                                    <constraint firstItem="oYQ-34-xwt" firstAttribute="top" secondItem="JOK-Yg-ZfC" secondAttribute="bottom" constant="8" id="jkn-lo-1UG"/>
+                                    <constraint firstItem="dkk-QE-0HV" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="jxO-rN-Pxo"/>
+                                    <constraint firstItem="lNm-AY-KKH" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="jyw-8X-COt"/>
+                                    <constraint firstItem="oYQ-34-xwt" firstAttribute="leading" secondItem="50H-Xf-XyH" secondAttribute="trailing" constant="6" id="k0q-MK-8PE"/>
+                                    <constraint firstAttribute="bottom" secondItem="LHN-3E-FmJ" secondAttribute="bottom" constant="7" id="k5O-8j-ZFs"/>
+                                    <constraint firstItem="LHN-3E-FmJ" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="kG3-wY-QdZ"/>
+                                    <constraint firstItem="oHW-sF-HAS" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="kMU-9B-2wR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zmy-5x-rKY" secondAttribute="bottom" constant="7" id="l5V-jq-kzE"/>
+                                    <constraint firstAttribute="bottom" secondItem="NeN-i9-Vgo" secondAttribute="bottom" constant="7" id="lau-ah-axY"/>
+                                    <constraint firstItem="hHR-0j-zjK" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="lfQ-1g-Lih"/>
+                                    <constraint firstItem="4fo-KF-2D0" firstAttribute="leading" secondItem="Iqb-zD-mlA" secondAttribute="leading" id="ljd-nA-PAT"/>
+                                    <constraint firstItem="oYQ-34-xwt" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="mHk-On-UDW"/>
+                                    <constraint firstItem="JOK-Yg-ZfC" firstAttribute="leading" secondItem="wY7-e6-IwI" secondAttribute="trailing" constant="6" id="mNO-YC-la6"/>
+                                    <constraint firstItem="4fo-KF-2D0" firstAttribute="top" secondItem="S9i-Sb-fuf" secondAttribute="bottom" constant="8" id="mc0-lZ-2Cp"/>
+                                    <constraint firstItem="pAg-Cr-V7d" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="mfJ-Ju-aQf"/>
+                                    <constraint firstItem="Wh0-oW-SBD" firstAttribute="top" secondItem="W2k-VE-wgb" secondAttribute="bottom" constant="8" id="mg4-QH-pa1"/>
+                                    <constraint firstItem="cvh-Cj-bAG" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="nEe-48-anc"/>
+                                    <constraint firstAttribute="trailing" secondItem="yvY-X1-pXg" secondAttribute="trailing" constant="7" id="nUC-Ke-kXr"/>
+                                    <constraint firstItem="g18-Yc-KKD" firstAttribute="leading" secondItem="NeN-i9-Vgo" secondAttribute="trailing" constant="6" id="oKZ-xj-Gj1"/>
+                                    <constraint firstItem="oHW-sF-HAS" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="oTU-CR-bWA"/>
+                                    <constraint firstItem="AMm-p0-pSb" firstAttribute="leading" secondItem="XRT-9U-iCc" secondAttribute="trailing" constant="6" id="p1O-Ls-CZX"/>
+                                    <constraint firstItem="g18-Yc-KKD" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="p8r-2M-Ft5"/>
+                                    <constraint firstItem="Dkc-0W-PiV" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="ppa-LH-OIO"/>
+                                    <constraint firstItem="cvh-Cj-bAG" firstAttribute="leading" secondItem="AMm-p0-pSb" secondAttribute="trailing" constant="6" id="q3w-F4-c0e"/>
+                                    <constraint firstItem="0yU-bA-evX" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="qTI-Rp-Ykb"/>
+                                    <constraint firstItem="lef-yc-hMW" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="qTu-IE-WrW"/>
+                                    <constraint firstItem="hHR-0j-zjK" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="qdp-s3-9Sq"/>
+                                    <constraint firstItem="W2k-VE-wgb" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="qql-FU-R6s"/>
+                                    <constraint firstItem="zLq-jB-2Mv" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="rRm-YC-lcB"/>
+                                    <constraint firstItem="ymb-HL-d6W" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="rgw-ZU-RBh"/>
+                                    <constraint firstItem="Wh0-oW-SBD" firstAttribute="leading" secondItem="xYn-4R-5zr" secondAttribute="trailing" constant="6" id="rwz-qU-9X5"/>
+                                    <constraint firstItem="9KU-TT-iSs" firstAttribute="leading" secondItem="pAg-Cr-V7d" secondAttribute="trailing" constant="6" id="sJ5-4j-v93"/>
+                                    <constraint firstItem="Rap-sO-yBv" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="sv1-wD-5pY"/>
+                                    <constraint firstItem="f0W-hD-oUF" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="syf-Ex-UKm"/>
+                                    <constraint firstItem="50H-Xf-XyH" firstAttribute="leading" secondItem="jXB-u4-40Q" secondAttribute="trailing" constant="6" id="t0w-8A-JcJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="2jn-D9-chn" secondAttribute="bottom" constant="7" id="tON-wy-N3z"/>
+                                    <constraint firstItem="QQZ-Lr-bf0" firstAttribute="leading" secondItem="g18-Yc-KKD" secondAttribute="trailing" constant="6" id="tyK-qd-GTx"/>
+                                    <constraint firstItem="S9i-Sb-fuf" firstAttribute="leading" secondItem="Iqb-zD-mlA" secondAttribute="leading" id="uEH-Ji-OjR"/>
+                                    <constraint firstItem="0yU-bA-evX" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="uXq-BO-6UA"/>
+                                    <constraint firstItem="wY7-e6-IwI" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="utQ-Nn-Wbq"/>
+                                    <constraint firstItem="4fo-KF-2D0" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="v6p-HW-e8P"/>
+                                    <constraint firstItem="ZzW-UG-6pD" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="vOn-iY-yqU"/>
+                                    <constraint firstItem="wY7-e6-IwI" firstAttribute="top" secondItem="XRT-9U-iCc" secondAttribute="bottom" constant="8" id="wGZ-m2-8c2"/>
+                                    <constraint firstItem="0yU-bA-evX" firstAttribute="leading" secondItem="cvh-Cj-bAG" secondAttribute="trailing" constant="6" id="wbk-cu-Luh"/>
+                                    <constraint firstItem="rx2-7z-2Tb" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="wqM-XY-7yy"/>
+                                    <constraint firstItem="9KU-TT-iSs" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="wvw-Fp-ukD"/>
+                                    <constraint firstItem="Wh0-oW-SBD" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="x82-sR-Vbn"/>
+                                    <constraint firstItem="VBn-XZ-hjx" firstAttribute="height" secondItem="Iqb-zD-mlA" secondAttribute="height" id="xBa-4v-vdl"/>
+                                    <constraint firstItem="bau-mo-x0x" firstAttribute="leading" secondItem="ESM-GW-unI" secondAttribute="trailing" constant="6" id="xTC-4a-879"/>
+                                    <constraint firstItem="LHN-3E-FmJ" firstAttribute="top" secondItem="yvY-X1-pXg" secondAttribute="bottom" constant="8" id="yGn-Eo-IgI"/>
+                                    <constraint firstItem="2jn-D9-chn" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="yLb-Vw-Sdc"/>
+                                    <constraint firstItem="9KU-TT-iSs" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="yh1-yx-Fmw"/>
+                                    <constraint firstItem="g2J-tb-LNh" firstAttribute="width" secondItem="Iqb-zD-mlA" secondAttribute="width" id="yld-mJ-ZvD"/>
+                                    <constraint firstItem="TBS-NB-NAu" firstAttribute="leading" secondItem="W2k-VE-wgb" secondAttribute="trailing" constant="6" id="z3z-h0-zej"/>
+                                    <constraint firstItem="dzK-iB-AA2" firstAttribute="top" secondItem="Iqb-zD-mlA" secondAttribute="top" id="zID-Bf-hgY"/>
+                                    <constraint firstAttribute="trailing" secondItem="wML-Ca-DuZ" secondAttribute="trailing" constant="7" id="zIa-Gd-ynR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OdT-JF-gQy" secondAttribute="trailing" id="20S-h7-50G"/>
+                            <constraint firstItem="c5l-xE-B1i" firstAttribute="leading" secondItem="kOx-vS-p5p" secondAttribute="leading" id="4tE-T7-CaM"/>
+                            <constraint firstAttribute="trailing" secondItem="c5l-xE-B1i" secondAttribute="trailing" id="8Qw-rp-PxJ"/>
+                            <constraint firstItem="c5l-xE-B1i" firstAttribute="top" secondItem="OdT-JF-gQy" secondAttribute="bottom" id="AQf-Tw-J3I"/>
+                            <constraint firstItem="MGq-Ay-Neu" firstAttribute="top" secondItem="c5l-xE-B1i" secondAttribute="bottom" id="bBk-zy-hYy"/>
+                            <constraint firstItem="OdT-JF-gQy" firstAttribute="top" secondItem="kOx-vS-p5p" secondAttribute="top" id="k3b-Ir-eJE"/>
+                            <constraint firstItem="c5l-xE-B1i" firstAttribute="top" secondItem="OdT-JF-gQy" secondAttribute="bottom" id="k8t-T7-OxY"/>
+                            <constraint firstItem="OdT-JF-gQy" firstAttribute="leading" secondItem="kOx-vS-p5p" secondAttribute="leading" id="qE8-hd-RmQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acButton" destination="XRT-9U-iCc" id="0ef-nj-ntd"/>
+                        <outlet property="displayLable" destination="mAV-jw-xdD" id="Pln-hT-RIn"/>
+                        <outletCollection property="specialButtons" destination="AMm-p0-pSb" collectionClass="NSMutableArray" id="Bxw-FC-yLh"/>
+                        <outletCollection property="specialButtons" destination="cvh-Cj-bAG" collectionClass="NSMutableArray" id="EXQ-6n-gLk"/>
+                        <outletCollection property="digitalButtons" destination="Zmy-5x-rKY" collectionClass="NSMutableArray" id="nYz-wA-iX9"/>
+                        <outletCollection property="digitalButtons" destination="6gJ-eT-fzw" collectionClass="NSMutableArray" id="kx9-aq-4Rr"/>
+                        <outletCollection property="digitalButtons" destination="ZzW-UG-6pD" collectionClass="NSMutableArray" id="kme-DF-lwa"/>
+                        <outletCollection property="digitalButtons" destination="ymb-HL-d6W" collectionClass="NSMutableArray" id="BQX-Gh-yCm"/>
+                        <outletCollection property="digitalButtons" destination="50H-Xf-XyH" collectionClass="NSMutableArray" id="hRT-Mh-Vuf"/>
+                        <outletCollection property="digitalButtons" destination="oYQ-34-xwt" collectionClass="NSMutableArray" id="NJg-R8-eel"/>
+                        <outletCollection property="digitalButtons" destination="hHR-0j-zjK" collectionClass="NSMutableArray" id="Puv-fk-cDg"/>
+                        <outletCollection property="digitalButtons" destination="wY7-e6-IwI" collectionClass="NSMutableArray" id="Wds-f3-GyS"/>
+                        <outletCollection property="digitalButtons" destination="JOK-Yg-ZfC" collectionClass="NSMutableArray" id="EBd-BC-NfD"/>
+                        <outletCollection property="digitalButtons" destination="g2J-tb-LNh" collectionClass="NSMutableArray" id="thI-yf-roZ"/>
+                        <outletCollection property="mathOperationButtons" destination="LHN-3E-FmJ" collectionClass="NSMutableArray" id="VrB-IY-YAw"/>
+                        <outletCollection property="mathOperationButtons" destination="yvY-X1-pXg" collectionClass="NSMutableArray" id="bFT-tn-U73"/>
+                        <outletCollection property="mathOperationButtons" destination="VBn-XZ-hjx" collectionClass="NSMutableArray" id="g2k-Gs-0tH"/>
+                        <outletCollection property="mathOperationButtons" destination="wML-Ca-DuZ" collectionClass="NSMutableArray" id="Igb-Vf-oQC"/>
+                        <outletCollection property="mathOperationButtons" destination="0yU-bA-evX" collectionClass="NSMutableArray" id="1rY-aC-j0a"/>
+                        <outletCollection property="digitalButtons" destination="Dkc-0W-PiV" collectionClass="NSMutableArray" id="mss-uC-qjY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qsx-Fe-bRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.902548725637189" y="237.59999999999999"/>
+        </scene>
+    </scenes>
+</document>

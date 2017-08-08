@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  DSCalculator
 //
-//  Created by Mac on 26.07.17.
+//  Created by Mac on 07.08.17.
 //  Copyright © 2017 Dmitry. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     @IBOutlet weak var displayLable: UILabel!
     @IBOutlet weak var acButton: DSButtons!
@@ -17,12 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet var mathOperationButtons: [DSButtons]!
     
     let managerCalculator = DSManagerOfCalculator()
+    let firstController = ViewController()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        displayLable.text =  "\(managerCalculator.calculator.accumulator)"
+        displayLable.text = "\(managerCalculator.calculator.accumulator)"
     }
-
+    
     func resetBorderButtons(buttons1: Array<DSButtons>, buttons2: Array<DSButtons>) {
         let sharedArray: [DSButtons] = buttons1 + buttons2
         for button: DSButtons in sharedArray {
@@ -42,7 +43,7 @@ class ViewController: UIViewController {
         resetBorderButtons(buttons1: mathOperationButtons, buttons2: digitalButtons)
         sender.layer.borderColor = UIColor.gray.cgColor
     }
-
+    
     @IBAction func inputMathSignButtonPressed(_ sender: DSButtons) {
         if let displayText = managerCalculator.inputMathSign(sender.tag, text: displayLable.text) {
             displayLable.text = displayText
@@ -77,23 +78,18 @@ class ViewController: UIViewController {
     
     @IBAction func percentsButtonPressed(_ sender: DSButtons) {
         resetBorderButtons(buttons1: mathOperationButtons, buttons2: digitalButtons)
-
+        
         displayLable.text = managerCalculator.percentPressed(text: displayLable.text)
     }
-    
+
     //MARK: - NavigationMethods
     
     override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        if toInterfaceOrientation.isLandscape {
-            if let vc = UIStoryboard(name: "SecondStoryboard", bundle: nil).instantiateInitialViewController() {
-                vc.modalTransitionStyle = .crossDissolve
-                present(vc, animated: true, completion: nil)
-            }
+        if toInterfaceOrientation.isPortrait {
+            dismiss(animated: true, completion: {
+                self.firstController.viewDidLoad()
+            })
         }
     }
-    
-    
+
 }
-
-
-

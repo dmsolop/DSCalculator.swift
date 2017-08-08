@@ -10,6 +10,11 @@ import UIKit
 
 class DSCalculator {
     
+    static let sharedInstance : DSCalculator = {
+        let instance = DSCalculator()
+        return instance
+    }()
+    
     enum MathOperations: Int {
         case sum = 1, subtract, multiply, divide, changeSign
     }

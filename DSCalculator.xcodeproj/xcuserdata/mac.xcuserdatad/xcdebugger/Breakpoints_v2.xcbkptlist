@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DSCalculator/Controllers/ViewController.swift"
-            timestampString = "523574155.319758"
+            timestampString = "523885061.801378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "inputMathSignButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DSCalculator/Controllers/ViewController.swift"
-            timestampString = "523638453.216034"
+            timestampString = "523885061.801378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "resultButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -38,15 +38,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DSCalculator/Controllers/ViewController.swift"
-            timestampString = "523574157.309008"
+            timestampString = "523885061.801378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "inputNumberrButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -54,15 +54,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DSCalculator/Controllers/ViewController.swift"
-            timestampString = "523637599.010821"
+            timestampString = "523885061.801378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "clearResultButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -70,15 +70,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DSCalculator/Controllers/ViewController.swift"
-            timestampString = "523637599.010821"
+            timestampString = "523885061.801378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "changeSignButtonPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -86,17 +86,143 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DSCalculator/Controllers/ViewController.swift"
-            timestampString = "523637599.010821"
+            timestampString = "523885061.801378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "percentsButtonPressed(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DSCalculator/Models/DSCalculator.swift"
+            timestampString = "523881911.293536"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "DSCalculator"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DSCalculator.DSCalculator.accumulator.getter : Swift.Double"
+                  moduleName = "DSCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/iOS%20projects/DSCalculator/DSCalculator/Models/DSCalculator.swift"
+                  timestampString = "523882315.506586"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "13">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DSCalculator.DSCalculator.accumulator.setter : Swift.Double"
+                  moduleName = "DSCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/iOS%20projects/DSCalculator/DSCalculator/Models/DSCalculator.swift"
+                  timestampString = "523882315.510463"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DSCalculator.DSCalculator.init () -&gt; DSCalculator.DSCalculator"
+                  moduleName = "DSCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/iOS%20projects/DSCalculator/DSCalculator/Models/DSCalculator.swift"
+                  timestampString = "523882315.514116"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "7">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DSCalculator/Models/DSCalculator.swift"
+            timestampString = "523881920.46346"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "sharedInstance"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static DSCalculator.DSCalculator.(sharedInstance : DSCalculator.DSCalculator).(variable initialization expression).(closure #1)"
+                  moduleName = "DSCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/iOS%20projects/DSCalculator/DSCalculator/Models/DSCalculator.swift"
+                  timestampString = "523882315.521012"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DSCalculator.DSCalculator.sharedInstance.unsafeMutableAddressor : DSCalculator.DSCalculator"
+                  moduleName = "DSCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/iOS%20projects/DSCalculator/DSCalculator/Models/DSCalculator.swift"
+                  timestampString = "523882315.523053"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static DSCalculator.DSCalculator.sharedInstance.getter : DSCalculator.DSCalculator"
+                  moduleName = "DSCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/iOS%20projects/DSCalculator/DSCalculator/Models/DSCalculator.swift"
+                  timestampString = "523882315.525305"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
